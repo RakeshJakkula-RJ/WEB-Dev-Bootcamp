@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+           background-color:lightblue;
+           padding: 10px;
+           border:5px solid black;
+           display: flex;
+        }
+
+        .box > div{
+             /*padding: 30px; */
+            width: 50px;
+        }
+        
+        .box > :nth-child(even){
+            background-color:brown;    
+        }
+
+
+        .box > :nth-child(odd){
+            background-color:lightcyan;    
+        }
+
+        .item-1{
+            flex-shrink: 1;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="item-1">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div class="item-6">6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+</body>
+</html>
