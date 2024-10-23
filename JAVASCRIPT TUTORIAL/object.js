@@ -46,3 +46,4 @@ delete details.had_dinner;
 console.log(details);
 
 delete details["pincode"];
+console.log(details);
