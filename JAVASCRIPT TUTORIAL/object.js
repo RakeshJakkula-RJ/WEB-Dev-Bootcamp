@@ -1,4 +1,5 @@
 // Object : Object is a collection of properties, 
+// Objects are real life objects(properties),
 // object = Key and value,
 // object have unique keys 
 
@@ -39,7 +40,7 @@ console.log(details);
 details["had_dinner"] = true;
 console.log(details);
 
-// To delete data from the objects 
+// To delete data from the objects we have to use 'delete' keyword
 
 delete details.had_dinner;
 console.log(details);
