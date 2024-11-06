@@ -1,0 +1,46 @@
+
+<!-- adding Nested html tags into body tag using append method -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- <div id="container">
+          
+        <div></div>
+        <div></div>
+        <div></div>
+    </div> -->
+
+</body>
+</html>
+
+<script>
+
+    let parentBox = document.createElement("div");
+
+    parentBox.setAttribute("id", "container");
+
+    let div1 = document.createElement("div");
+      let p = document.createElement("p");
+        p.innerText = "P tag"
+        div1.append(p);
+
+    let div2 = document.createElement("div");
+      div2.innerText = "div 2 tag";
+
+
+    let div3 = document.createElement("div");
+    div3.innerText = "div 3 tag";
+
+
+    parentBox.append(div1,div2,div3);
+
+    document.querySelector("body").append(parentBox);
+
+</script>

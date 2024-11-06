@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .g-image{
+            height : 500px;
+            width : 500px;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    // set Attributes
+    // syntax : setAttribute("attributeName", "value");
+
+      let image = document.createElement("img");
+
+      image.setAttribute("src", "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=800");
+
+      image.setAttribute("alt", "google image");
+
+      image.setAttribute("class", "g-image");
+
+      document.querySelector("body").append(image);
+
+</script>

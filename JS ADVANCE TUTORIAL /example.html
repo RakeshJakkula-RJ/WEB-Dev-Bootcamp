@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1{
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 id="name">RJ</h1>
+    <button id="btn" onClick="completeFunction()">Mark as complete</button>
+</body>
+</html>
+
+<script>
+
+    document.getElementById("name").style.backgroundColor = "orange";
+
+    function completeFunction(){
+
+        document.getElementById("btn").style.bacckgroundColor = "pink";
+
+        document.getElementById("btn").innerText = "completed";
+
+        document.getElementById("btn").style.color = "white";
+
+        document.getElementById("btn").style.fontSize = "40px";
+
+    }
+</script>
