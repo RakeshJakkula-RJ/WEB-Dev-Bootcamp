@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+
+<script>
+
+    // reject ----> error.
+    // resolve ----> response(data) or result.
+
+
+        //let  myPromise = new Promise((resolve, reject)=>{
+              
+             // resolve("this is reject example"); // no asynchronousbcode.
+       //  });
+
+         // handling promise 
+         // 2 methods which we can chain to promise object,
+         // 1.then() callback ---> handle the resolve state. 
+         // 2.catch() callback ---> handle the reject state.
+         // syntax after chaining 2 methods to promise object;
+         // myPromise.then().catch();
+
+
+         /* myPromise.then((result)=>{
+            console.log("result", result);
+         })
+         .catch((error)=>{
+            console.log("error", error);
+         }); */
+
+         // step-1. declare the promise.
+
+         let promiseResult = new Promise((resolve, reject)=>{
+                     
+                setTimeout(function(){ // asynchronous code
+
+                    reject("no data");
+                })
+         }, 5000);
+ 
+         console.log(promiseResult);
+         
+         // step-2. handle the promise.
+
+         promiseResult.then((resolveValue)=>{
+
+             console.log(resolveValue);
+
+         })
+         .catch((rejectValue)=>{
+
+                console.log("rejectValue", rejectValue);
+         });
+
+
+</script>
