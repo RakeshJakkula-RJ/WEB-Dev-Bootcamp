@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+      // #PromiseAll
+       // ----> To handle multiple promises together.
+       // ----> the promise will be resolved, if all the promises inside it are resolved
+       // ----> else it will be rejected.
+
+       let promise1 = new Promise((resolve, reject) => {
+
+           setTimeout(() => {
+
+                resolve(100);
+           }, 2000)
+
+       });
+
+       let promise2 = new Promise((resolve, reject) => {
+
+        setTimeout(() => {
+
+             //  reject(200);
+             resolve(200);
+        }, 6000)
+
+    });
+
+      let promiseArray = [promise1, promise2];
+
+      Promise.all(promiseArray).then(function(resolvedValue){
+     
+        console.log("result", resolvedValue);
+
+      })
+      .catch(function(rejectedValue){
+
+          console.log("error", rejectedValue);
+      })
+
+
+</script>
+
