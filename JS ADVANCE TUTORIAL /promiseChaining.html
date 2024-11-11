@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+      let myPromise = new Promise(function(resolve, reject){
+
+           setTimeout(() => {  // asynchronous code 
+
+                resolve(1)
+           }, 1000)
+
+      });
+
+
+         myPromise.then(function(a){
+
+               alert(a); // 1
+               return a * 2   // default resolve
+               // 1*2 = 2
+
+         }).then(function(b){
+
+               alert(b); // 2
+
+               return new Promise(function(resolve, reject){
+                   
+                   reject("this is error");
+
+               })
+               // 2 * 2 = 4
+         }).then(function(result){
+
+              alert(result); // 4
+
+         }).catch(function(error){
+
+            // console.log(error);
+
+            alert(error);
+            
+          // irrespective of any number of '.then' methods (given . then methods),
+          // in 'promise chaining' at the end a single '.catch method' should be placed 
+          // in case of any errors occurs to identify them.
+
+         });
+
+</script>
