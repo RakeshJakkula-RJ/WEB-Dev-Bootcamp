@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+          
+        img{
+            height : 400px;
+            width : 100%
+        }
+
+    </style>
+</head>
+<body>
+    
+       <button onclick="start()">start</button>
+       <button oncliclk="stop()">stop</button>
+
+       <div id="container"></div>
+
+</body>
+</html>
+
+<script>
+    
+        var images = ["https://images.pexels.com/photos/709552/pexels-photo-709552.jpeg?auto=compress&cs=tinysrgb&w=800",
+       "https://images.pexels.com/photos/355465/pexels-photo-355465.jpeg?auto=compress&cs=tinysrgb&w=800",
+       "https://images.pexels.com/photos/1366957/pexels-photo-1366957.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.pexels.com/photos/1146708/pexels-photo-1146708.jpeg?auto=compress&cs=tinysrgb&w=800",
+    
+];
+
+         let id;
+
+         function start(){
+                 
+            //document.querySelector("#container") = ""; -->
+              let slideImage = document.createElement("img");
+
+              let i = 0;
+                   
+              id = setInterval(function(){
+
+                if(i == images.length){
+                    i = 0;
+                 }
+
+                slideImage.src = images[i++];
+                document.querySelector("#container").append(slideImage);
+              
+            }, 2000);
+      
+         }
+
+         function stop(){
+     
+           clearInterval(id);
+           document.querySelector("#container");
+         }
+
+</script>
