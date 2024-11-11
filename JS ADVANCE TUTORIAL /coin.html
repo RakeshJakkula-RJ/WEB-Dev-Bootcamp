@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+     let coin = 1;
+
+     let cart = new Promise((resolve, reject)=>{
+
+          setTimeout(function(){ // asynchronous
+
+             if(coin == 1){
+                resolve(coin);
+             }
+             else{
+                reject("cart page issue");
+             }
+          }, 6000);
+     });
+
+        
+          cart.then(function(resolve){
+              
+              console.log(resolve); // data or result 
+          })
+          .catch(function(reject){
+    
+               console.log(reject);
+          });
+
+</script>
