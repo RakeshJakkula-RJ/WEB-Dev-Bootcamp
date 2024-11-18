@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+      // Inheritance 
+      
+
+       let grandFather = {
+
+              name : "Robby",
+              lastName : "keene",
+              DNA : "cobrakai",
+              bloodGroup : "A+"
+
+       };
+
+       let Father = Object.create(grandFather);
+
+       Father.name = "jhonny";
+       Father.house = "dojo";
+
+       let son = Object.create(Father);
+
+       // GrandFather ---> Father ----> Son
+
+       console.log(Father);
+
+       console.log(son.bloodGroup)
+
+        son.name = "Miguel";
+
+       // [[prototype]] ---> this points to the original model from which it is built.
+
+        /* console.log(son.__proto__); // Father
+
+        console.log(son.__proto__.__proto__); // grandFather
+
+        console.log(son.__proto__.__proto__.__proto__); // constructor --> object(), method.
+
+        console.log(son.__proto__.__proto__.__proto__.__proto__); */
+
+        let array = [1, 2, 3];
+
+        console.log(array);
+
+</script>
