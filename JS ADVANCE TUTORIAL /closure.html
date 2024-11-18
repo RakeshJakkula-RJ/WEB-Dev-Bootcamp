@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+ <script>
+
+    // closure : closure is nothing but ahaving a function inside another function.
+    
+     function outerFunction(){  
+         
+        let output = "chrome";
+
+        return function innerFunction(){
+
+            console.log("outerFunction", output);
+
+        }
+
+     };
+
+     let out = outerFunction();
+
+     out();
+
+ </script>
