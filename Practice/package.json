@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "firebase": "^11.0.2",
+    "is-odd": "^3.0.1",
+    "json": "^11.0.0",
+    "json-server": "^1.0.0-beta.3",
+    "server": "^1.0.41"
+  },
+  "name": "web-dev-bootcamp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
