@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+       /* let student1 = {
+
+            name : "Miguel",
+            age : 24,
+            batch : "flm-web"
+       }
+
+       let student2 = {
+
+        name : "Robby",
+        age : 21,
+        batch : "flm-web"
+
+       }
+
+        function studentDetails(name, age){
+  
+            this.name = name;
+            this.age = age;
+            this.batch = "flm-web";
+            this.course = "FSD"
+
+        }
+
+        let student3 = new studentDetails("Hawk", 22);
+
+        console.log(student3); */
+
+        let student1 = {
+
+            name : "Miguel",
+            age : 24,
+            batch : "flm-web"
+       }
+
+       let student2 = {
+
+        name : "Robby",
+        age : 21,
+        batch : "flm-web"
+
+       }
+
+       let student3 = {
+
+            name : "Hawk",
+            age : 22,
+            batch : "flm-web"
+       }
+
+       
+       function addProperties(city, state){
+
+            this.studentCity = city;
+            this.studentState = state;
+
+       }
+
+       // to add properties to  objects that are already defined when there are 'n' no.of objects 
+       //then we need to use '3' methods,
+       // call / apply / blind
+
+         addProperties.call(student1, "hyderabad", "telangana");
+
+          console.log(student1);
+
+          addProperties.apply(student2, ["GDK", "TS"]);
+
+           console.log(student2);
+
+          let updateStudent3 = addProperties.bind(student3, "GDK", "TS");
+
+           updateStudent3();
+
+           console.log(student3);
+
+</script>

@@ -1,0 +1,21 @@
+
+@tailwind base;
+@tailwind components;
+
+.aftercomponent{
+     text-align: center ;
+     background-color: brown
+}
+
+@tailwind utilities;
+
+@layer components{
+
+.button{
+
+     @apply bg-gray-600 text-yellow-500 mx-4 my-4 rounded-md 
+            hover:bg-gray-800 text-3xl active:bg-black 
+             focus:bg-green-700 focus:outline-red-700
+}
+
+}
